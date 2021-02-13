@@ -1,0 +1,23 @@
+.enter-name {
+    background-color: green;
+    width: 50vw;
+    height: 400px;
+    margin: 15vh auto;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    & h3 {
+        font-size: 30px;
+    }
+    & input {
+        margin: 10% auto;
+        text-align: center;
+        width: 50%;
+    }
+
+    & button{
+        margin: 0 auto;
+        width: 50px;
+    }
+}
