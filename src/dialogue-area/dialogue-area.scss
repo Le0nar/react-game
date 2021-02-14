@@ -1,0 +1,22 @@
+.dialoque-area {
+    display: flex;
+    flex-direction: column;
+
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform:translate(-50%, -50%);
+
+    max-width: 700px;
+    &__name {
+        text-align: center;
+        background: green;
+        border: 2px solid #000;
+        width: 70px;
+    }
+    &__display {
+        margin-top: 2vh;
+        background: green;
+        border: 2px solid #000;
+    }
+}
