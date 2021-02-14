@@ -1,5 +1,14 @@
-input, button, a {
+* {
+    box-sizing: border-box;
+}
+input, button, a, li, ul {
     text-decoration: none;
     border: none;
     outline: none;
+    margin: 0;
+    padding: 0;
+
+}
+li {
+    list-style-type: none;
 }

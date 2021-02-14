@@ -1,0 +1,20 @@
+.main-menu {
+    width: 400px;
+    height: 200px;
+    margin: 25vH auto;
+    background: green;
+    
+    font-size: 40px;
+    & ul {
+        padding-top: 2vh;
+    }
+    & li {
+        cursor: pointer;
+    }
+    & li:hover {
+        background: brown;
+    }
+    & li+li {
+        padding-top: 3vh;
+    }
+}
