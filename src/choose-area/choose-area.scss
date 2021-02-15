@@ -1,0 +1,8 @@
+.choose-area {
+    &__possible-answer{
+        cursor: pointer;
+    }
+    &__possible-answer:hover {
+        background: blue;
+    }
+}

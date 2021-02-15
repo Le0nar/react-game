@@ -1,16 +1,27 @@
 import React from 'react';
 import './choose-area.scss';
-import PossibleAnswer from '../possible-answer/possible-answer';
 
 
 class ChooseArea extends React.Component {
     render() {
         return (
         <div className="choose-area">
-            <PossibleAnswer />
-            <PossibleAnswer />
-            <PossibleAnswer />
-            <PossibleAnswer />
+            <div className="choose-area__possible-answer">
+                <span>←</span>
+                <span>Да, конечно</span>
+            </div>
+            <div className="choose-area__possible-answer">
+                <span>←</span>
+                <span>Да, конечно</span>
+            </div>
+            <div className="choose-area__possible-answer">
+                <span>←</span>
+                <span>Да, конечно</span>
+            </div>
+            <div className="choose-area__possible-answer">
+                <span>←</span>
+                <span>Да, конечно</span>
+            </div>
         </div>
         );
     }
