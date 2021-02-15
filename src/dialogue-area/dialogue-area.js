@@ -1,6 +1,7 @@
 import React from 'react';
 import './dialogue-area.scss';
 import DisplayText from '../display-text/display-text';
+import ChooseArea from '../choose-area/choose-area';
 
 
 class DialogueArea extends React.Component {
@@ -11,7 +12,7 @@ class DialogueArea extends React.Component {
                 123
             </div>
             <div className="dialoque-area__display">
-                <DisplayText />
+                <ChooseArea />
             </div>
         </div>
         );
