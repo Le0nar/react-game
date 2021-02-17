@@ -4,7 +4,7 @@ function EnterName () {
     return (
         <div className="enter-name">
             <h3>Введите имя</h3>
-            <input autofocus="true"/>
+            <input autoFocus={true}/>
             <button>OK</button>
         </div>
     )

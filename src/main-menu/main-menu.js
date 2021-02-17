@@ -1,13 +1,12 @@
 import React from 'react';
 import './main-menu.scss';
-import GameArea from '../game-area/game-area';
 
 class MainMenu extends React.Component {
     constructor(props) {
         super(props)
     }
     startGame = () => {
-        this.props.onChangeCurrentPage(GameArea)
+        this.props.onChangeCurrentPage('EnterName')
     }
     toMainSettings = () => {
         console.log(2)
