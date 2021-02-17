@@ -10,6 +10,7 @@ import MainMenu from '../main-menu/main-menu';
 class App extends React.Component {
   constructor(props) {
     super(props);
+    this.changeCurrentPage = this.changeCurrentPage.bind(this);
     this.state = {
       currentPage: MainMenu,
       parnterName: 'Hayako',
@@ -20,10 +21,16 @@ class App extends React.Component {
       gameScore:''
     };
   }
+
+  changeCurrentPage(pageName) {
+    this.setState({currentPage: pageName})
+  }
+
   render() {
     return (
       <div className="App">
-        <this.state.currentPage />
+        <this.state.currentPage 
+        onChangeCurrentPage={this.changeCurrentPage} />
       </div>
     );
   }

@@ -14,7 +14,7 @@ class GameArea extends React.Component {
         <Header />
         <DialogueArea />
         
-        <Modal />
+        {/* <Modal /> */}
       </div>
     );
   }
