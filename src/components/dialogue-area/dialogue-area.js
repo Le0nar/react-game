@@ -2,7 +2,7 @@ import React from 'react';
 import './dialogue-area.scss';
 import DisplayText from '../display-text/display-text';
 import ChooseArea from '../choose-area/choose-area';
-import partnerImgSrc from '../images/hayako.png'
+import partnerImgSrc from '../../images/hayako.png'
 
 class DialogueArea extends React.Component {
     render() {
