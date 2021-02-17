@@ -5,8 +5,8 @@ class MainMenu extends React.Component {
     constructor(props) {
         super(props)
     }
-    startGame = () => {
-        this.props.onChangeCurrentPage('EnterName')
+    toEnterName = () => {
+        this.props.onChangeState('pageName','EnterName');
     }
     toMainSettings = () => {
         console.log(2)
@@ -18,7 +18,7 @@ class MainMenu extends React.Component {
         return (
         <div className="main-menu">
             <ul>
-                <li onClick={this.startGame}>Новая игра</li>
+                <li onClick={this.toEnterName}>Новая игра</li>
                 <li onClick={this.toMainSettings}>Настройки игры</li>
                 <li onClick={this.toStatistics}>Статистика</li>
             </ul>

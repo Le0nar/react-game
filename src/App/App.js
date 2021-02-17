@@ -12,7 +12,7 @@ import GameArea from '../game-area/game-area';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.changeCurrentPage = this.changeCurrentPage.bind(this);
+    this.changeState = this.changeState.bind(this);
     this.state = {
       pageName: 'MainMenu',
       parnterName: 'Hayako',
@@ -24,15 +24,17 @@ class App extends React.Component {
     };
   }
 
-  changeCurrentPage(name) {
-    this.setState({pageName: name})
+  changeState(key,value) {
+    this.setState({[key]: value})
   }
 
   render() {
     const mainMenu = <MainMenu 
-      onChangeCurrentPage={this.changeCurrentPage} />
-    const enterName = <EnterName />
+      onChangeState={this.changeState} />
+    const enterName = <EnterName 
+      onChangeState={this.changeState}/>
     const gameArea = <GameArea 
+      onChangeState={this.changeState}
       parnterName = {this.state.parnterName} />
 
     let currentPage = mainMenu
