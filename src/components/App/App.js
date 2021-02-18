@@ -15,7 +15,7 @@ class App extends React.Component {
     this.changeState = this.changeState.bind(this);
     this.state = {
       pageName: 'MainMenu',
-      parnterName: 'Hayako',
+      partnerName: 'Хаяко',
       music:'',
       playerName: 'Player',
       gameBackground: '',
@@ -36,7 +36,8 @@ class App extends React.Component {
       onChangeState={this.changeState}/>
     const gameArea = <GameArea 
       onChangeState={this.changeState}
-      parnterName = {this.state.parnterName} />
+      partnerName = {this.state.partnerName}
+      playerName = {this.state.playerName} />
 
     let currentPage = mainMenu
     switch (this.state.pageName) {

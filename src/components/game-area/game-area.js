@@ -7,17 +7,17 @@ import Modal from '../modal/modal';
 
 
 
-class GameArea extends React.Component {
-  render() {
+const GameArea = (props) => {
     return (
       <div className="game-area">
         <Header />
-        <DialogueArea />
+        <DialogueArea 
+        {...props}/>
         
         {/* <Modal /> */}
       </div>
     );
-  }
 }
+
 
 export default GameArea;
