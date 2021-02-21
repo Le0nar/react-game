@@ -22,6 +22,7 @@ class App extends React.Component {
       gameTime:'',
       gameScore: 0,
       currentQuestion: 0,
+      currentMove: 0,
       isSoundOn:true
     };
   }
@@ -40,6 +41,7 @@ class App extends React.Component {
       partnerName = {this.state.partnerName}
       playerName = {this.state.playerName} 
       currentQuestion ={this.state.currentQuestion}
+      currentMove ={this.state.currentMove}
       gameScore = {this.stategameScore}/>
 
     let currentPage = mainMenu
