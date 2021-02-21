@@ -6,30 +6,12 @@ import hayakoImg from '../../images/hayako.png'
 
 
 class DialoqueArea extends React.Component {
-    nextQuestion = () => {
-        // currentQuestion +1
-    }
-    nextPhrase = () => {
-        // if (dialoquesData.playerPhrase) return dialoquesData.questions[i].partnerPhrase
-        // if (dialoquesData.questions[i].partnerPhrase) return варианты ответа
-        // if (dialoquesData.questions[i].answers.[ответ].answer) return dialoquesData.questions[i].answers.[ответ].reaction
-        // addScore(/dialoquesData.questions[i].answers.[ответ].score/)
-  
-        // if (this.propsCurrentQuesion < 4) {
-            // nextQuesiotn()
-        // } else {
-        //              sumUp
-        // }
-  
-  
-    }
     render() {
       const playerName = this.props.playerName;
       const partnerImg = <img src={hayakoImg} alt="Девочка"></img>
       const dialoguesData = this.props.dialoguesData;
       const currentContent = <DisplayText 
       content={dialoguesData.playerPhrase + playerName} />;
-        console.log(this.props)
         
       return (
         <div className="dialoque-area">
@@ -45,7 +27,7 @@ class DialoqueArea extends React.Component {
          </div>  
       );
     }
-  }
+}
   
   
   export default DialoqueArea;
