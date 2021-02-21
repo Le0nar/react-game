@@ -1,22 +1,21 @@
 import React from 'react';
 import './game-area.scss';
 import Header from '../header/header';
-import DialogueArea from '../dialogue-area/dialogue-area';
+import DialoqueArea from '../dialogue-area/dialogue-area';
 import Modal from '../modal/modal';
+import dialoguesData from '../../data/dialogues.json'
 
-
-
-
-const GameArea = (props) => {
+class GameArea extends React.Component {
+  render() {
     return (
-      <div className="game-area">
-        <Header />
-        <DialogueArea 
-        {...props}/>
-        
-        {/* <Modal /> */}
-      </div>
+    <div className="GameArea">
+      <Header />
+      <DialoqueArea 
+      {...this.props}
+      dialoguesData = {dialoguesData} />
+    </div>
     );
+  }
 }
 
 

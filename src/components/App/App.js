@@ -20,7 +20,8 @@ class App extends React.Component {
       playerName: 'Player',
       gameBackground: '',
       gameTime:'',
-      gameScore:'',
+      gameScore: 0,
+      currentQuestion: 0,
       isSoundOn:true
     };
   }
