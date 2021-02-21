@@ -3,7 +3,7 @@ import './dialogue-area.scss';
 import DisplayText from '../display-text/display-text';
 import ChooseArea from '../choose-area/choose-area';
 import hayakoImg from '../../images/hayako.png'
-import dialoguesData from '../../data/dialogs.json'
+import dialoguesData from '../../data/dialogues.json'
 
 class DialogueArea extends React.Component {
     render() {
@@ -20,7 +20,7 @@ class DialogueArea extends React.Component {
             </div>
             <div className="dialoque-area__display">
                 <DisplayText 
-                content={dialoguesData.questions[0].partnerPhrase} />
+                content={dialoguesData.playerPhrase + this.props.playerName} />
             </div>
         </div>
         );
