@@ -15,7 +15,13 @@ class DialoqueArea extends React.Component {
     }
   }
   changeCurrentAnswer = (e) => {
-    const selectedAnswer = e.target.parentElement.dataset.answer;
+    let selectedAnswer;
+    if (e.target.dataset.answer === undefined) {
+      selectedAnswer = e.target.parentElement.dataset.answer;
+    } else {
+      selectedAnswer = e.target.dataset.answer;
+    }
+
     this.setState({currentAnswer: selectedAnswer});
 
     this.changeMove();
