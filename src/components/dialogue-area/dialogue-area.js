@@ -10,22 +10,36 @@ class DialoqueArea extends React.Component {
     super(props);
     this.state = {
       currentAnswer: 'left',
-      isPlayerName: true
+      isPlayerName: true,
+      isBtnActive: true,
     }
+  }
+  changeCurrentAnswer = (e) => {
+    const selectedAnswer = e.target.parentElement.dataset.answer;
+    this.setState({currentAnswer: selectedAnswer});
+
+    this.changeMove();
   }
   changeMove = () => {
     const currentMove = this.props.currentMove;
     const currentQuestion = this.props.currentQuestion;
 
     this.props.onChangeState('currentMove', currentMove + 1);
-    this.setState({isPlayerName: !this.state.isPlayerName})
+    this.setState({isPlayerName: !this.state.isPlayerName});
+
     if (currentMove === 3) {
       this.setState({isPlayerName: false})
       this.props.onChangeState('currentMove', 1);
       this.props.onChangeState('currentQuestion', currentQuestion + 1);
     }
 
-    
+    if (currentMove === 1) {
+      this.setState({isBtnActive: false})
+    }
+
+    if (currentMove === 2) {
+      this.setState({isBtnActive: true})
+    }
   }
   render() {
     const playerName = this.props.playerName;
@@ -36,6 +50,7 @@ class DialoqueArea extends React.Component {
     content={dialoguesData.playerPhrase + playerName} />;
 
     let currentContent = startPhrase;
+
     let currentQuestion = this.props.currentQuestion;
     const currentAnswer = this.state.currentAnswer;
 
@@ -45,14 +60,19 @@ class DialoqueArea extends React.Component {
       currentContent = <DisplayText 
       content={dialoguesData.questions[currentQuestion].partnerPhrase} />;
     }else if (this.props.currentMove === 2) {
-      currentContent = <DisplayText 
-      content='Варианты ответов' />;
+      currentContent = <ChooseArea 
+      content = {dialoguesData.questions[currentQuestion].answers} 
+      onChangeCurrentAnswer = {this.changeCurrentAnswer}/>
     } else if (this.props.currentMove === 3) {
       currentContent = <DisplayText 
-      content={dialoguesData.questions[currentQuestion].answers[currentAnswer].reaction} />;
+      content={dialoguesData.questions[currentQuestion].answers[this.state.currentAnswer].reaction} />;
     }
     
     const currentName = this.state.isPlayerName ? this.props.playerName : this.props.partnerName;
+
+    const nextButton = this.state.isBtnActive ? (<button onClick={this.changeMove}>
+                  Далее
+                </button>) : false;
     return (
       <div className="dialoque-area">
           <div className="dialoque-area__top">    
@@ -63,9 +83,7 @@ class DialoqueArea extends React.Component {
           </div>
               <div className="dialoque-area__display">
                   {currentContent}
-                  <button onClick={this.changeMove}>
-                    Далее
-                  </button>
+                  {nextButton}
               </div>
         </div>  
     );
