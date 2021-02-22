@@ -1,11 +1,13 @@
 import './header.scss';
 import Scoreboard from "../scoreboard/scoreboard";
 
-function Header () {
+function Header (props) {
     return (
         <header>
-            <Scoreboard isTimeBoard={false} />
-            <Scoreboard isTimeBoard={true} />
+            <Scoreboard isTimeBoard={false} 
+            {...props}/>
+            <Scoreboard isTimeBoard={true} 
+            {...props}/>
         </header>
     )
 }

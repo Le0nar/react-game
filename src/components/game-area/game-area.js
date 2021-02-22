@@ -13,7 +13,9 @@ class GameArea extends React.Component {
     return (
     <div className="game-area"
       onClick={this.addListener}>
-      <Header />
+      <Header 
+      gameScore = {this.props.gameScore}
+      gameTime = {this.props.gameTime}/>
       <DialoqueArea 
       {...this.props}
       dialoguesData = {dialoguesData} />

@@ -15,17 +15,28 @@ class DialoqueArea extends React.Component {
     }
   }
   changeCurrentAnswer = (e) => {
-    let selectedAnswer;
+    let answerDirection;
+
     if (e.target.dataset.answer === undefined) {
-      selectedAnswer = e.target.parentElement.dataset.answer;
+      answerDirection = e.target.parentElement.dataset.answer;
     } else {
-      selectedAnswer = e.target.dataset.answer;
+      answerDirection = e.target.dataset.answer;
     }
 
-    this.setState({currentAnswer: selectedAnswer});
+    this.setState({currentAnswer: answerDirection});
+
+    const addScore = () => {
+      const currentQuestion = this.props.currentQuestion;
+      const dialoguesData = this.props.dialoguesData;
+      const questionScore = dialoguesData.questions[currentQuestion].answers[answerDirection].score;
+      
+      this.props.onChangeState('gameScore', Number(this.props.gameScore) + Number(questionScore))
+    }
+    addScore();
 
     this.changeMove();
   }
+
   changeMove = () => {
     const questionQuantity = 5;
     const currentMove = this.props.currentMove;
