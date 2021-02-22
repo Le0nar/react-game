@@ -38,11 +38,7 @@ class App extends React.Component {
       onChangeState={this.changeState}/>
     const gameArea = <GameArea 
       onChangeState={this.changeState}
-      partnerName = {this.state.partnerName}
-      playerName = {this.state.playerName} 
-      currentQuestion ={this.state.currentQuestion}
-      currentMove ={this.state.currentMove}
-      gameScore = {this.stategameScore}/>
+      {...this.state}/>
 
     let currentPage = mainMenu
     switch (this.state.pageName) {
