@@ -19,7 +19,7 @@ class App extends React.Component {
       music:'',
       playerName: 'Player',
       gameBackground: '',
-      gameTime:'0:32',
+      gameTime:'00:00',
       gameScore: 0,
       currentQuestion: 0,
       currentMove: 0,

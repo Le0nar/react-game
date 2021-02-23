@@ -14,6 +14,7 @@ class GameArea extends React.Component {
     <div className="game-area"
       onClick={this.addListener}>
       <Header 
+      onChangeState={this.props.onChangeState}
       gameScore = {this.props.gameScore}
       gameTime = {this.props.gameTime}/>
       <DialoqueArea 
