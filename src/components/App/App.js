@@ -23,7 +23,7 @@ class App extends React.Component {
       gameScore: 0,
       currentQuestion: 0,
       currentMove: 0,
-      isSoundOn:true
+      isSoundOff:true
     };
   }
 
