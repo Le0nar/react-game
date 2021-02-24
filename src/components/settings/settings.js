@@ -13,12 +13,22 @@ class Settings extends React.Component {
         return (
             <div className="settings">
                 <h3>Settings</h3>
-                <SettingsItem name = 'Partner'
-                    value = {partnersList}/>
-                <SettingsItem name = 'Place'
-                value = {placesList}/>
-                <SettingsItem name = 'Time game'
-                value = {activeList}/>
+                <SettingsItem 
+                    name = 'Partner'
+                    onChangeState={this.props.onChangeState}
+                    currentValue={this.props.partnerName}
+                    valueList = {partnersList}/>
+                <SettingsItem 
+                    name = 'Place'
+                    currentValue={this.props.datePlace}
+                    onChangeState={this.props.onChangeState}
+                    valueList = {placesList}/>
+                <SettingsItem 
+                    name = 'Time game'
+                    currentValue={this.props.timeGame}
+                    onChangeState={this.props.onChangeState}
+                    valueList = {activeList}/>
+
                 <ToMainMenuBtn content="Back to main menu" 
                     onChangeState={this.props.onChangeState}/>
             </div>
