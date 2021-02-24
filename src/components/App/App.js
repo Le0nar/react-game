@@ -15,7 +15,7 @@ class App extends React.Component {
     super(props);
     this.changeState = this.changeState.bind(this);
     this.state = {
-      pageName: 'EndGame',
+      pageName: 'MainMenu',
       partnerName: 'Хаяко',
       playerName: 'Player',
       datePlace: 'Curry',
@@ -32,14 +32,13 @@ class App extends React.Component {
   }
 
   render() {
-    const mainMenu = <MainMenu 
-      onChangeState={this.changeState} />
-    const enterName = <EnterName 
-      onChangeState={this.changeState}/>
+    const mainMenu = <MainMenu onChangeState={this.changeState} />
+    const enterName = <EnterName onChangeState={this.changeState}/>
     const gameArea = <GameArea 
       onChangeState={this.changeState}
       {...this.state}/>
     const endGame = <EndGame 
+      onChangeState={this.changeState}
       {...this.state}/>
 
     let currentPage = mainMenu

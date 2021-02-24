@@ -1,5 +1,6 @@
 import React from 'react';
 import './end-game.scss';
+import ToMainMenuBtn from '../to-main-menu-btn/to-main-menu-btn';
 
 
 class EndGame extends React.Component {
@@ -19,7 +20,10 @@ class EndGame extends React.Component {
                     Date place :
                     <span> {this.props.datePlace}.</span> 
                 </p>
+                <ToMainMenuBtn content="To main menu"
+                                onChangeState={this.props.onChangeState}/>
             </div>
+
         );
     }
 }
