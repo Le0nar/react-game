@@ -1,0 +1,20 @@
+.end-game {
+    background: #c4c4c4;
+    max-width: 450px;
+    height: 300px;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    margin: auto;
+    padding: 16px 32px;
+    & h3 {
+        text-align: center;
+    }
+    &__text {
+        padding-top: 8px;
+    }
+}
