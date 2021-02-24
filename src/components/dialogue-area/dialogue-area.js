@@ -62,6 +62,11 @@ class DialoqueArea extends React.Component {
       this.setState({isBtnActive: false});
     } 
   }
+
+  goToEndGame = () => {
+    this.props.onChangeState('pageName', 'EndGame');
+  }
+
   render() {
     const playerName = this.props.playerName;
     const partnerImg = <img src={hayakoImg} alt="Девочка"></img>
@@ -107,10 +112,12 @@ class DialoqueArea extends React.Component {
       <React.Fragment>
         <DisplayText 
         content={dialoguesData.decisions[reactionMark]}/>
-        <button className="dialoque-area__btn">Конец игры</button>
+        <button className="dialoque-area__btn"
+                onClick={this.goToEndGame}> 
+          Finish the game
+        </button>
       </React.Fragment>)
     }
-
 
     const currentName = this.state.isPlayerName ? this.props.playerName : this.props.partnerName;
 
@@ -133,5 +140,4 @@ class DialoqueArea extends React.Component {
   }
 }
   
-  
-  export default DialoqueArea;
+export default DialoqueArea;

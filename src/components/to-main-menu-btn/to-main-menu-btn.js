@@ -4,7 +4,7 @@ import './to-main-menu-btn.scss';
 
 class ToMainMenuBtn extends React.Component {
     goToMainMenu = () => {
-        this.props.onChangeState('pageName', 'MainMenu')
+        this.props.onChangeState('pageName', 'MainMenu');
     }
     render() {
         return (
