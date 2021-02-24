@@ -9,7 +9,7 @@ class Settings extends React.Component {
     render() {
         const partnersList = ['Hayako', 'Yuki', 'Neko'];
         const placesList = ['Carry', 'Spring', 'Waterfall'];
-        const activeList = ['Off', 'On']
+        const activeList = ['Off', 'On'];
         return (
             <div className="settings">
                 <h3>Settings</h3>
@@ -19,7 +19,8 @@ class Settings extends React.Component {
                 value = {placesList}/>
                 <SettingsItem name = 'Time game'
                 value = {activeList}/>
-                <ToMainMenuBtn content="Back to main menu" />
+                <ToMainMenuBtn content="Back to main menu" 
+                    onChangeState={this.props.onChangeState}/>
             </div>
         );
     }

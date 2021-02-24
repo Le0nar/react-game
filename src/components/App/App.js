@@ -16,7 +16,7 @@ class App extends React.Component {
     super(props);
     this.changeState = this.changeState.bind(this);
     this.state = {
-      pageName: 'Settings',
+      pageName: 'MainMenu',
       partnerName: 'Hayako',
       playerName: 'Player',
       datePlace: 'Curry',
