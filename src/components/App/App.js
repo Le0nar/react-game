@@ -5,6 +5,7 @@ import MainMenu from '../main-menu/main-menu';
 import EnterName from '../enter-name/enter-name';
 import GameArea from '../game-area/game-area';
 import EndGame from '../end-game/end-game';
+import Settings from '../settings/settings';
 
 
 
@@ -15,8 +16,8 @@ class App extends React.Component {
     super(props);
     this.changeState = this.changeState.bind(this);
     this.state = {
-      pageName: 'MainMenu',
-      partnerName: 'Хаяко',
+      pageName: 'Settings',
+      partnerName: 'Hayako',
       playerName: 'Player',
       datePlace: 'Curry',
       gameTime:'00:00',
@@ -40,6 +41,9 @@ class App extends React.Component {
     const endGame = <EndGame 
       onChangeState={this.changeState}
       {...this.state}/>
+    const settings = <Settings 
+      onChangeState={this.changeState}
+      {...this.state}/>
 
     let currentPage = mainMenu
     switch (this.state.pageName) {
@@ -54,6 +58,9 @@ class App extends React.Component {
         break;
       case 'EndGame':
         currentPage = endGame;
+        break;
+      case 'Settings':
+        currentPage = settings;
         break;
     
       default:

@@ -1,6 +1,6 @@
 import React from 'react';
 import './modal.scss';
-import SelectSetting from '../select-setting/select-setting';
+import SettingsItem from '../settings-item/settings-item';
 
 
 class Modal extends React.Component {
@@ -13,7 +13,7 @@ class Modal extends React.Component {
                     <h2>Настройки</h2>
                 </div>
                 <div className="modal-body">
-                    <SelectSetting />
+                    <SettingsItem />
                     <p>Ещё другой текст...</p>
                 </div>
             </div>
