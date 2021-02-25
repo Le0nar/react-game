@@ -25,13 +25,13 @@ class EndGame extends React.Component {
         const newStatistics = JSON.stringify(statistics)
         localStorage.setItem('statistics', newStatistics);
 
-        const restartGame = () => {
+        const resetGameData = () => {
             this.props.onChangeState('pageName', 'MainMenu');
             this.props.onChangeState('currentQuestion', 0);
             this.props.onChangeState('currentMove', 0);
             this.props.onChangeState('gameScore', 0);
         }
-        restartGame();
+        resetGameData();
     }
     
     render() {

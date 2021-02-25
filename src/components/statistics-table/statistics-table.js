@@ -9,8 +9,8 @@ class StatisticsTable extends React.Component {
             <table className="statistics-table">
                 <thead>
                     <tr>
-                        <th>Player</th>
-                        <th>Partner</th>
+                        <th>Player name</th>
+                        <th>Partner name</th>
                         <th>Place</th>
                         <th>Time</th>
                         <th>Score</th>
