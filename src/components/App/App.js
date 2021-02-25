@@ -35,18 +35,20 @@ class App extends React.Component {
   }
 
   render() {
-    const mainMenu = <MainMenu onChangeState={this.changeState} />
-    const enterName = <EnterName onChangeState={this.changeState}/>
-    const gameArea = <GameArea 
-      onChangeState={this.changeState}
-      {...this.state}/>
-    const endGame = <EndGame 
-      onChangeState={this.changeState}
-      {...this.state}/>
-    const settings = <Settings 
-      onChangeState={this.changeState}
-      {...this.state}/>
-    const statistics = <Statistics {...this.state}/>;
+    const mainMenu = <MainMenu onChangeState={this.changeState} />;
+    const enterName = <EnterName onChangeState={this.changeState} />;
+    const gameArea = (
+      <GameArea onChangeState={this.changeState} {...this.state} />
+    );
+    const endGame = (
+      <EndGame onChangeState={this.changeState} {...this.state} />
+    );
+    const settings = (
+      <Settings onChangeState={this.changeState} {...this.state} />
+    );
+    const statistics = (
+      <Statistics {...this.state} onChangeState={this.changeState} />
+    );
 
     let currentPage = mainMenu
     switch (this.state.pageName) {
