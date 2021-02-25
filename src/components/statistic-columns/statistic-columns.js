@@ -1,30 +1,19 @@
 import React from 'react';
 
-class StatisticsTable extends React.Component {
+class StatisticColumns extends React.Component {
     render () {
-        const array = [1,2,3,4,5];
-
+        const statisticsData = [[1,2,3,4,5], [6,7,8,9,10]];
+        const lineList = statisticsData.map((el, index) => {
+            return (<tr key={index}>{el.map((subEl, subIndex) => {
+                return <td key={subIndex} >{subEl}</td>
+            })}</tr>)
+        })
         return(
             <>
-                <tr>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                </tr>
+                {lineList}
             </>
         );
     }
 }
 
-export default StatisticsTable;
+export default StatisticColumns;
