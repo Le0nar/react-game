@@ -47,6 +47,10 @@ class EndGame extends React.Component {
                     <span> {this.props.gameScore} points.</span>
                 </p>
                 <p className="end-game__text">
+                    Partner :
+                    <span> {this.props.partnerName}.</span> 
+                </p>
+                <p className="end-game__text">
                     Date place :
                     <span> {this.props.datePlace}.</span> 
                 </p>
