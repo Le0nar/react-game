@@ -18,6 +18,8 @@ class App extends React.Component {
     this.changeState = this.changeState.bind(this);
     this.state = {
       pageName: 'MainMenu',
+      // pageName: 'EndGame',
+      // 
       partnerName: 'Hayako',
       playerName: 'Player',
       datePlace: 'Curry',
