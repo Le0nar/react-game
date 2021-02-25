@@ -6,6 +6,7 @@ import EnterName from '../enter-name/enter-name';
 import GameArea from '../game-area/game-area';
 import EndGame from '../end-game/end-game';
 import Settings from '../settings/settings';
+import Statistics from '../statistics/statistics';
 
 
 
@@ -45,6 +46,7 @@ class App extends React.Component {
     const settings = <Settings 
       onChangeState={this.changeState}
       {...this.state}/>
+    const statistics = <Statistics {...this.state}/>;
 
     let currentPage = mainMenu
     switch (this.state.pageName) {
@@ -62,6 +64,9 @@ class App extends React.Component {
         break;
       case 'Settings':
         currentPage = settings;
+        break;
+      case 'Statistics':
+        currentPage = statistics;
         break;
     
       default:

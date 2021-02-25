@@ -12,7 +12,7 @@ class MainMenu extends React.Component {
         this.props.onChangeState('pageName','Settings');
     }
     toStatistics = () => {
-        console.log(3)
+        this.props.onChangeState('pageName','Statistics');
     }
     render() {
         return (
