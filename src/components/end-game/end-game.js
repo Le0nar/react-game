@@ -11,7 +11,16 @@ class EndGame extends React.Component {
             statistics = localStorage.getItem('statistics');
         }
 
+        const today = new Date();
+        const hour = today.getHours();
+        const min = today.getMinutes();
+        const dateOfMonth = today.getDate();
+        const month = today.getMonth() + 1;
+        const year = today.getFullYear();
+        const currentDate = `${hour}:${min} ${dateOfMonth}.${month}.${year}`;
+
         const newResult = [
+          currentDate,
           this.props.playerName,
           this.props.partnerName,
           this.props.datePlace,
@@ -20,7 +29,7 @@ class EndGame extends React.Component {
         ];
 
         statistics = JSON.parse(statistics)
-        statistics.push(newResult)
+        statistics.unshift(newResult)
         
         const newStatistics = JSON.stringify(statistics)
         localStorage.setItem('statistics', newStatistics);
