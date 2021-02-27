@@ -28,6 +28,8 @@ class App extends React.Component {
       isTimeGame: false,
       isSoundOn: true,
       isMusicOn: false,
+      musicVolume: 1,
+      soundVolume: 1
     };
   }
 
