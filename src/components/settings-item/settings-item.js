@@ -3,42 +3,40 @@ import './settings-item.scss';
 
 
 class SettingsItem extends React.Component {
-    changeValue = (e) => {
-        const propertyName = e.target.previousElementSibling.innerText;
-        const value = e.target.value;
-        let stateName = '';
+  changeValue = (e) => {
+    const propertyName = e.target.previousElementSibling.innerText;
+    const value = e.target.value;
+    let stateName = "";
 
-        if (propertyName === 'Partner') {
-            stateName = 'partnerName';
-        } else if (propertyName === 'Place') {
-            stateName = 'datePlace';
-        } else if (propertyName === 'Time game') {
-            stateName = 'timeGame';
-        }
-
-        this.props.onChangeState(stateName, value);
-
-        console.log(this.props)
+    if (propertyName === "Partner") {
+      stateName = "partnerName";
+    } else if (propertyName === "Place") {
+      stateName = "datePlace";
     }
-    render() {
-        const listOptions = this.props.valueList.map(el => {
-            return <option key={el}>{el}</option>
-        });
-        const select = (
-            <select 
-                defaultValue={this.props.currentValue}
-                onChange={this.changeValue}>
-                {listOptions}
-            </select>);
-        return (
-        <div className="settings-item">
-            <span>
-                {this.props.name}
-            </span>
-            {select}
-        </div>
-        );
-    }
+
+    this.props.onChangeState(stateName, value);
+
+    console.log(this.props);
+  };
+  render() {
+    const listOptions = this.props.valueList.map((el) => {
+      return <option key={el}>{el}</option>;
+    });
+    const select = (
+      <select
+        defaultValue={this.props.currentValue}
+        onChange={this.changeValue}
+      >
+        {listOptions}
+      </select>
+    );
+    return (
+      <div className="settings-item">
+        <span>{this.props.name}</span>
+        {select}
+      </div>
+    );
+  }
 }
 
 export default SettingsItem;

@@ -1,6 +1,7 @@
 import React from 'react';
 import './settings.scss';
 import SettingsItem from '../settings-item/settings-item';
+import SettingsToggle from '../settings-toggle/settings-toggle';
 import ToMainMenuBtn from '../to-main-menu-btn/to-main-menu-btn';
 
 
@@ -9,7 +10,6 @@ class Settings extends React.Component {
     render() {
         const partnersList = ['Hayako', 'Yuki', 'Neko'];
         const placesList = ['Carry', 'Spring', 'Waterfall'];
-        const activeList = ['Off', 'On'];
         return (
             <div className="settings">
                 <h3>Settings</h3>
@@ -23,11 +23,11 @@ class Settings extends React.Component {
                     currentValue={this.props.datePlace}
                     onChangeState={this.props.onChangeState}
                     valueList = {placesList}/>
-                <SettingsItem 
+                <SettingsToggle 
                     name = 'Time game'
-                    currentValue={this.props.timeGame}
-                    onChangeState={this.props.onChangeState}
-                    valueList = {activeList}/>
+                    propertyName='isTimeGame'
+                    currentValue={this.props.isTimeGame}
+                    onChangeState={this.props.onChangeState}/>
 
                 <ToMainMenuBtn content="Back to main menu" 
                     onChangeState={this.props.onChangeState}/>
