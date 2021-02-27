@@ -1,8 +1,6 @@
 import React from 'react';
-import './settings-item.scss';
 
-
-class SettingsItem extends React.Component {
+class SettingsSelect extends React.Component {
   changeValue = (e) => {
     const propertyName = e.target.previousElementSibling.innerText;
     const value = e.target.value;
@@ -39,4 +37,4 @@ class SettingsItem extends React.Component {
   }
 }
 
-export default SettingsItem;
+export default SettingsSelect;

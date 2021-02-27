@@ -1,7 +1,7 @@
 import React from 'react';
 import './settings.scss';
 import AudioSettings from '../audio-settings/audio-settings';
-import SettingsItem from '../settings-item/settings-item';
+import SettingsSelect from '../settings-select/settings-select';
 import SettingsToggle from '../settings-toggle/settings-toggle';
 import ToMainMenuBtn from '../to-main-menu-btn/to-main-menu-btn';
 
@@ -17,12 +17,12 @@ class Settings extends React.Component {
                 <AudioSettings 
                     {...this.props}
                     onChangeState={this.props.onChangeState}/>
-                <SettingsItem 
+                <SettingsSelect 
                     name = 'Partner'
                     onChangeState={this.props.onChangeState}
                     currentValue={this.props.partnerName}
                     valueList = {partnersList}/>
-                <SettingsItem 
+                <SettingsSelect 
                     name = 'Place'
                     currentValue={this.props.datePlace}
                     onChangeState={this.props.onChangeState}
