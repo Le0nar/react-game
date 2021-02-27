@@ -7,8 +7,7 @@ import GameArea from '../game-area/game-area';
 import EndGame from '../end-game/end-game';
 import Settings from '../settings/settings';
 import Statistics from '../statistics/statistics';
-import MusicBtn from '../music-btn/music-btn';
-
+import Music from '../music/music';
 
 
 
@@ -26,7 +25,9 @@ class App extends React.Component {
       gameScore: 0,
       currentQuestion: 0,
       currentMove: 0,
-      isTimeGame: false
+      isTimeGame: false,
+      isSoundOn: true,
+      isMusicOn: false,
     };
   }
 
@@ -78,7 +79,7 @@ class App extends React.Component {
     return (
       <div className="App">
         {currentPage}
-        <MusicBtn />
+        <Music isMusicOn={this.state.isMusicOn}/>
       </div>
     );
   }

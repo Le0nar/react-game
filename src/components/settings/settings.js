@@ -1,5 +1,6 @@
 import React from 'react';
 import './settings.scss';
+import AudioSettings from '../audio-settings/audio-settings';
 import SettingsItem from '../settings-item/settings-item';
 import SettingsToggle from '../settings-toggle/settings-toggle';
 import ToMainMenuBtn from '../to-main-menu-btn/to-main-menu-btn';
@@ -13,6 +14,9 @@ class Settings extends React.Component {
         return (
             <div className="settings">
                 <h3>Settings</h3>
+                <AudioSettings 
+                    {...this.props}
+                    onChangeState={this.props.onChangeState}/>
                 <SettingsItem 
                     name = 'Partner'
                     onChangeState={this.props.onChangeState}
