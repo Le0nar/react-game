@@ -14,6 +14,7 @@ class DialoqueArea extends React.Component {
       isBtnActive: true,
     }
   }
+
   changeCurrentAnswer = (e) => {
     let answerDirection;
 
@@ -23,18 +24,23 @@ class DialoqueArea extends React.Component {
       answerDirection = e.target.dataset.answer;
     }
 
-    this.setState({currentAnswer: answerDirection});
+    this.changeDirectionAnswer(answerDirection)
 
-    const addScore = () => {
-      const currentQuestion = this.props.currentQuestion;
-      const dialoguesData = this.props.dialoguesData;
-      const questionScore = dialoguesData.questions[currentQuestion].answers[answerDirection].score;
-      
-      this.props.onChangeState('gameScore', Number(this.props.gameScore) + Number(questionScore))
-    }
-    addScore();
+    this.addScore(answerDirection);
 
     this.changeMove();
+  }
+
+  changeDirectionAnswer = (direction) => {
+    this.setState({currentAnswer: direction});
+  }
+
+  addScore = (direction) => {
+    const currentQuestion = this.props.currentQuestion;
+    const dialoguesData = this.props.dialoguesData;
+    const questionScore = dialoguesData.questions[currentQuestion].answers[direction].score;
+    
+    this.props.onChangeState('gameScore', Number(this.props.gameScore) + Number(questionScore))
   }
 
   changeMove = () => {

@@ -44,7 +44,6 @@ class App extends React.Component {
       this.audio.play();
     }
   }
-
   render() {
     const mainMenu = <MainMenu onChangeState={this.changeState} />;
     const enterName = <EnterName onChangeState={this.changeState} />;
