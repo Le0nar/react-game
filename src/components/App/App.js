@@ -8,9 +8,7 @@ import EndGame from '../end-game/end-game';
 import Settings from '../settings/settings';
 import Statistics from '../statistics/statistics';
 import Music from '../music/music';
-
-
-
+import soundSrc from '../../audio/swipe.mp3';
 
 class App extends React.Component {
   constructor(props) {
@@ -26,7 +24,7 @@ class App extends React.Component {
       currentQuestion: 0,
       currentMove: 0,
       isTimeGame: false,
-      isSoundOn: true,
+      isSoundOn: false,
       isMusicOn: false,
       musicVolume: 1,
       soundVolume: 1
@@ -34,7 +32,17 @@ class App extends React.Component {
   }
 
   changeState(key,value) {
+    if(key === 'pageName' || key === "currentMove") {
+      this.playSound();
+    };
+    
     this.setState({[key]: value})
+  }
+  playSound = () => {
+    if (this.state.isSoundOn) {
+      this.audio = new Audio(soundSrc);
+      this.audio.play();
+    }
   }
 
   render() {

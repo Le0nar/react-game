@@ -1,5 +1,5 @@
 import React from 'react';
-import soundSrc from '../../music/Komiku-Road-2-Chill.mp3';
+import soundSrc from '../../audio/Komiku-Road-2-Chill.mp3';
 
 class Music extends React.Component {
   render() {
