@@ -3,6 +3,22 @@ import './choose-area.scss';
 
 
 class ChooseArea extends React.Component {
+    changeAnswer = (e) => {
+    const answerDirection = e.key.slice(5).toLowerCase();
+    
+    this.props.onChangeDirectionAnswer(answerDirection);
+
+    this.props.addScore(answerDirection);
+
+    this.props.changeMove();
+    
+    }
+    componentDidMount() {
+        document.addEventListener("keydown", this.changeAnswer);
+    }
+    componentWillUnmount() {
+        document.removeEventListener("keydown", this.changeAnswer);
+    }
     render() {
         return (
         <div className="choose-area" 
