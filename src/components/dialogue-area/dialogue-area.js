@@ -77,6 +77,22 @@ class DialoqueArea extends React.Component {
     this.props.onChangeState("pageName", "EndGame");
   };
 
+  moveWithArrow = (e) => {
+    if ((this.props.currentMove !== 2) && (e.key === "ArrowRight")) {
+      this.changeMove();
+    }
+    if ((this.props.currentMove === 2) && this.props.currentQuestion === 5) {
+      this.goToEndGame();
+    }
+  }
+
+  componentDidMount() {
+    document.addEventListener("keydown", this.moveWithArrow);
+  }
+  componentWillUnmount() {
+    document.removeEventListener("keydown", this.moveWithArrow);
+  }
+
   render() {
     let currentPartnerImg = hayakoImg;
     switch (this.props.partnerName) {

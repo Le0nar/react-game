@@ -13,8 +13,6 @@ class SettingsSelect extends React.Component {
     }
 
     this.props.onChangeState(stateName, value);
-
-    console.log(this.props);
   };
   render() {
     const listOptions = this.props.valueList.map((el) => {
