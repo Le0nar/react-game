@@ -20,6 +20,8 @@ class EnterName extends React.Component {
         this.props.onChangeState('pageName','GameArea');
         const currentPlayerName = this.changePlayerName(this.state.playerName);
         this.props.onChangeState('playerName', currentPlayerName);
+
+        this.props.setGameBackround()
     }
     render() {
         return(

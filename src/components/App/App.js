@@ -10,6 +10,11 @@ import Statistics from "../statistics/statistics";
 import Music from "../music/music";
 import soundSrc from "../../audio/swipe.mp3";
 
+import defaultBgImg from "../../images/backgrounds/default.png";
+import sicilyBgImg from "../../images/backgrounds/sicily.png";
+import curryBgImg from "../../images/backgrounds/curry.png";
+import springBgImg from "../../images/backgrounds/spring.png";
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -28,6 +33,7 @@ class App extends React.Component {
       isMusicOn: false,
       musicVolume: 1,
       soundVolume: 1,
+      backgroundImg: "default",
     };
   }
 
@@ -38,15 +44,27 @@ class App extends React.Component {
 
     this.setState({ [key]: value });
   }
+
+  setGameBackround = () => {
+    const value = this.state.datePlace.toLowerCase();
+    this.setState({ backgroundImg: value });
+  };
+
   playSound = () => {
     if (this.state.isSoundOn) {
       this.audio = new Audio(soundSrc);
       this.audio.play();
     }
   };
+
   render() {
     const mainMenu = <MainMenu onChangeState={this.changeState} />;
-    const enterName = <EnterName onChangeState={this.changeState} />;
+    const enterName = (
+      <EnterName
+        onChangeState={this.changeState}
+        setGameBackround={this.setGameBackround}
+      />
+    );
     const gameArea = (
       <GameArea onChangeState={this.changeState} {...this.state} />
     );
@@ -85,8 +103,30 @@ class App extends React.Component {
         break;
     }
 
+    let pathBgImage = defaultBgImg;
+    switch (this.state.backgroundImg) {
+      case "default":
+        pathBgImage = defaultBgImg;
+        break;
+      case "sicily":
+        pathBgImage = sicilyBgImg;
+        break;
+      case "spring":
+        pathBgImage = springBgImg;
+        break;
+      case "curry":
+        pathBgImage = curryBgImg;
+        break;
+
+      default:
+        break;
+    }
+
     return (
-      <div className="App">
+      <div
+        className="app"
+        style={{ backgroundImage: "url(" + pathBgImage + ")" }}
+      >
         {currentPage}
         <Music isMusicOn={this.state.isMusicOn} />
       </div>
