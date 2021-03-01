@@ -1,140 +1,140 @@
 {
-    "name": "Хаяко",
+    "name": "Hayako",
     "img": "hayako.png",
-    "playerPhrase":"Привет, меня зовут ",
+    "playerPhrase":"Hi, my name is ",
     "questions": [
         {
-            "partnerPhrase":"   У нас не  так много времени, давай начнем наше свидание. Кто ты по гороскопу?",
+            "partnerPhrase":"We don't have much time, so let's start our date. What is your star sign?",
             "answers": {
                 "left": {
-                    "answer": "Астрология - это псевдонаука.",
+                    "answer": "Astrology is a pseudo-science.",
                     "score": "5",
-                    "reaction": "Хм..."
+                    "reaction": "Hmm..."
                 },
                 "up": {
-                    "answer": "Если мне не изменяет память, я близнец.",
+                    "answer": "I’m a Gemini, if I remember correctly.",
                     "score": "15",
-                    "reaction": "Замечательно."
+                    "reaction": "Nice."
                 },
                 "right": {
-                    "answer": "Я карта.",
+                    "answer": "I'm The Map",
                     "score": "10",
-                    "reaction": "Хорошо, допустим ты карта..."
+                    "reaction": "Ok, let’s say you’re a Map."
                 },
                 "down": {
-                    "answer": "Я овен.",
+                    "answer": "I’m an Aries.",
                     "score": "20",
-                    "reaction": "Да? Я тоже! Я читала что у нас схожая астральная энергия!"
+                    "reaction": "Really? Me too! I’ve read we have similar astral energy!"
                 }
             }
         },
         {
-            "partnerPhrase":"Чем занимаешься в свободное время?",
+            "partnerPhrase":"What do you do in your spare time?",
             "answers": {
                 "left": {
-                    "answer": "Смотрю «4 свадьбы» по «Пятнице», очень нравится!",
+                    "answer": "I watch «4 weddings» on Friday channel. Love it",
                     "score": "20",
-                    "reaction": "Мне тоже нравится «4 свадьбы»!"
+                    "reaction": "I love watching «4 weddings» too!"
                 },
                 "up": {
-                    "answer": "Играю в компьютер и смотрю аниме!",
+                    "answer": "I like to play on the computer and watch anime!",
                     "score": "5",
-                    "reaction": "Ясно..."
+                    "reaction": "I see…"
                 },
                 "right": {
-                    "answer": "Хожу в тренажерный зал",
+                    "answer": "- I go to the gym.",
                     "score": "10",
-                    "reaction": "А по тебе не скажешь."
+                    "reaction": "You don't look like it."
                 },
                 "down": {
-                    "answer": "Смотрю сериалы.",
+                    "answer": "- I watch serials on TV.",
                     "score": "15",
-                    "reaction": "Понятно"
+                    "reaction": "I see…"
                 }
             }
         },
         {
-            "partnerPhrase":"Ты любишь путешествовать?",
+            "partnerPhrase":"Do you like to travel?",
             "answers": {
                 "left": {
-                    "answer": "Мне не нравится выходить из дома.",
+                    "answer": "I don’t like to live my house.",
                     "score": "5",
-                    "reaction": "Понятно..."
+                    "reaction": "I see..."
                 },
                 "up": {
-                    "answer": "Недавно вернулся из Праги, часто бываю там по работе.",
+                    "answer": "I had recently returned from Prague, I often go there for work.",
                     "score": "20",
-                    "reaction": "Круто! Я бы тоже хотела там побывать"
+                    "reaction": "Cool! I'd like to go there, too."
                 },
                 "right": {
-                    "answer": "Недавно был на даче.",
+                    "answer": "I had recently been to holiday cottage.",
                     "score": "10",
-                    "reaction": "Занятно."
+                    "reaction": " Interesting…."
                 },
                 "down": {
-                    "answer": "Мечтаю о путешествиях, всё никак не найду время!",
+                    "answer": "I dream of traveling, I still can't find the time to go somewhere!",
                     "score": "15",
-                    "reaction": "Путешесвтия это классно!"
+                    "reaction": "Travelling is lit!"
                 }
             }
         },
         {
-            "partnerPhrase":"У тебя есть любимый сериал?",
+            "partnerPhrase":"Have you got a favorite TV show?",
             "answers": {
                 "left": {
-                    "answer": "«Ивановы-Ивановы»",
+                    "answer": "«Ivanovs-Ivanov»",
                     "score": "10",
-                    "reaction": "Не смотрела"
+                    "reaction": "Haven’t watched"
                 },
                 "up": {
-                    "answer": "Я больше по аниме",
+                    "answer": "I favour anime.",
                     "score": "5",
                     "reaction": "..."
                 },
                 "right": {
-                    "answer": "«Игра престолов»",
+                    "answer": "«Game of thrones»",
                     "score": "15",
-                    "reaction": "Слышала про него, но не смотрела"
+                    "reaction": "I’ve heard about it but haven’t watched."
                 },
                 "down": {
-                    "answer": "«Очень странные дела»",
+                    "answer": "«Stranger Things»",
                     "score": "20",
-                    "reaction": "Он мне тоже очень нравится! Такой классный сеттинг."
+                    "reaction": "I love it too! The setting is so cool."
                 }
             }
         },
         {
-            "partnerPhrase":"Как относишься к животным? Лично я без ума от маленьких собачек.",
+            "partnerPhrase":"How do you feel about animals? Personally, I'm crazy about little dogs.",
             "answers": {
                 "left": {
-                    "answer": "Люблю домашних крыс, у меня дома есть парочка",
+                    "answer": "I love pet rats, I have two of them at home.",
                     "score": "10",
-                    "reaction": "Они же такие..."
+                    "reaction": "They are so…"
                 },
                 "up": {
-                    "answer": "Не люблю животных",
+                    "answer": "I don’t like animals.",
                     "score": "5",
-                    "reaction": "Ясно."
+                    "reaction": "Fair enough."
                 },
                 "right": {
-                    "answer": "Я люблю кошечек и собачек!",
+                    "answer": "I love kitties and dogs !",
                     "score": "15",
-                    "reaction": "Классно!"
+                    "reaction": "Cool !"
                 },
                 "down": {
-                    "answer": "Я люблю животных, меня самого дома ждут 2 собачки.",
+                    "answer": "I love animals, two dogs wait for me at home.",
                     "score": "20",
-                    "reaction": "Да? Классно, вот бы посмотреть..."
+                    "reaction": "Really, I’d like to see them…"
                 }
             }
         }
     ],
     "decisions": {
-        "s": "Мне очень понравилось с тобой общаться! Можешь записать мой номер.",
-        "a": "Приятно было пообщаться. Надеюсь еще увидимся",
-        "b": "Мне было приятно пообщаться, удачи.",
-        "c": "Благодарю за общение, пока",
-        "d": "Пока."
+        "s": "I really enjoyed talking to you! You can write down my number.",
+        "a": "It was nice to talk to you. Hope to see you again.",
+        "b": "It was nice to talk to you, good luck.",
+        "c": "Thank you for the conversation, bye.",
+        "d": "Bye."
     }
     
 }
