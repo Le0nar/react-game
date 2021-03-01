@@ -8,7 +8,10 @@ import dialoguesData from "../../data/dialogues.json";
 class GameArea extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { isModalOn: false };
+    this.state = { 
+      isModalOn: false,
+      timeLeft: 60,
+    };
   }
   showModal = (e) => {
     if (e.key === "Escape") {
@@ -19,13 +22,23 @@ class GameArea extends React.Component {
     this.setState({ isModalOn: !this.state.isModalOn });
   };
 
+  updateTime = () => {
+    if (this.props.gameTime === "01:00") {
+      this.props.onChangeState("pageName", "EndGame");
+    }
+  }
+
   componentDidMount() {
     document.addEventListener("keydown", this.showModal);
+    if (this.props.isTimeGame === true) {
+      this.timerID = setInterval(() => this.updateTime(), 1000);
+    }
   }
   componentWillUnmount() {
     document.removeEventListener("keydown", this.showModal);
-  }
+    clearInterval(this.timerID);
 
+  }
   render() {
     const modal = (
       <Modal

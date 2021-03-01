@@ -47,7 +47,9 @@ class EndGame extends React.Component {
       <div className="end-game">
         <h3>Thanks for playing the game</h3>
         <p className="end-game__text">
-          You completed the game in
+          {this.props.isTimeGame
+            ? "Time is left! You played for "
+            : "You completed the game in"}
           <span> {this.props.gameTime}.</span>
         </p>
         <p className="end-game__text">

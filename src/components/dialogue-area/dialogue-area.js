@@ -95,7 +95,13 @@ class DialoqueArea extends React.Component {
     }
 
     const playerName = this.props.playerName;
-    const partnerImg = <img src={currentPartnerImg} alt="Девочка" className="dialoque-area__partner-img"/>;
+    const partnerImg = (
+      <img
+        src={currentPartnerImg}
+        alt="Девочка"
+        className="dialoque-area__partner-img"
+      />
+    );
     const dialoguesData = this.props.dialoguesData;
 
     const startPhrase = (
