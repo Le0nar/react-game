@@ -2,7 +2,9 @@ import React from "react";
 import "./dialogue-area.scss";
 import DisplayText from "../display-text/display-text";
 import ChooseArea from "../choose-area/choose-area";
-import hayakoImg from "../../images/hayako.png";
+import hayakoImg from "../../images/partners/hayako.png";
+import nekoImg from "../../images/partners/neko.png";
+import yukiImg from "../../images/partners/yuki.png";
 
 class DialoqueArea extends React.Component {
   constructor(props) {
@@ -76,8 +78,24 @@ class DialoqueArea extends React.Component {
   };
 
   render() {
+    let currentPartnerImg = hayakoImg;
+    switch (this.props.partnerName) {
+      case "Hayako":
+        currentPartnerImg = hayakoImg;
+        break;
+      case "Neko":
+        currentPartnerImg = nekoImg;
+        break;
+      case "Yuki":
+        currentPartnerImg = yukiImg;
+        break;
+
+      default:
+        break;
+    }
+
     const playerName = this.props.playerName;
-    const partnerImg = <img src={hayakoImg} alt="Девочка"></img>;
+    const partnerImg = <img src={currentPartnerImg} alt="Девочка" className="dialoque-area__partner-img"/>;
     const dialoguesData = this.props.dialoguesData;
 
     const startPhrase = (
