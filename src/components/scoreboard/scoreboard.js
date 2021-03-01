@@ -10,7 +10,7 @@ class Scoreboard extends React.Component {
         const isTimeBoard = this.props.isTimeBoard;
         return(
             <div className="scoreboard">
-            <span>{isTimeBoard ? 'Время: ' : 'Очки: '}</span>
+            <span>{isTimeBoard ? 'Time: ' : 'Score: '}</span>
             {isTimeBoard ? gameTimeEl :gameScoreEl}
         </div>
         )

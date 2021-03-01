@@ -44,7 +44,7 @@ class EnterName extends React.Component {
   render() {
     return (
       <div className="enter-name">
-        <h3>Введите имя</h3>
+        <h3>Please enter your name</h3>
         <input autoFocus={true} onChange={this.handleChange} />
         <button onClick={this.startGame}>OK</button>
       </div>

@@ -167,7 +167,7 @@ class DialoqueArea extends React.Component {
 
     const nextButton = this.state.isBtnActive ? (
       <button className="dialoque-area__btn" onClick={this.changeMove}>
-        Далее
+        Next
       </button>
     ) : (
       false

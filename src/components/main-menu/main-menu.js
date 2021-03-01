@@ -20,9 +20,9 @@ class MainMenu extends React.Component {
         <>
         <div className="main-menu">
             <ul>
-                <li onClick={this.toEnterName}>Новая игра</li>
-                <li onClick={this.toSettings}>Настройки игры</li>
-                <li onClick={this.toStatistics}>Статистика</li>
+                <li onClick={this.toEnterName}>New game</li>
+                <li onClick={this.toSettings}>Settings</li>
+                <li onClick={this.toStatistics}>Statistics</li>
             </ul>
             
         </div>
