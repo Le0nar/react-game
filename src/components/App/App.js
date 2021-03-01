@@ -1,25 +1,25 @@
-import React from 'react';
-import './App.scss';
+import React from "react";
+import "./App.scss";
 
-import MainMenu from '../main-menu/main-menu';
-import EnterName from '../enter-name/enter-name';
-import GameArea from '../game-area/game-area';
-import EndGame from '../end-game/end-game';
-import Settings from '../settings/settings';
-import Statistics from '../statistics/statistics';
-import Music from '../music/music';
-import soundSrc from '../../audio/swipe.mp3';
+import MainMenu from "../main-menu/main-menu";
+import EnterName from "../enter-name/enter-name";
+import GameArea from "../game-area/game-area";
+import EndGame from "../end-game/end-game";
+import Settings from "../settings/settings";
+import Statistics from "../statistics/statistics";
+import Music from "../music/music";
+import soundSrc from "../../audio/swipe.mp3";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.changeState = this.changeState.bind(this);
     this.state = {
-      pageName: 'MainMenu',
-      partnerName: 'Hayako',
-      playerName: 'Player',
-      datePlace: 'Curry',
-      gameTime:'00:00',
+      pageName: "MainMenu",
+      partnerName: "Hayako",
+      playerName: "Player",
+      datePlace: "Curry",
+      gameTime: "00:00",
       gameScore: 0,
       currentQuestion: 0,
       currentMove: 0,
@@ -27,23 +27,23 @@ class App extends React.Component {
       isSoundOn: false,
       isMusicOn: false,
       musicVolume: 1,
-      soundVolume: 1
+      soundVolume: 1,
     };
   }
 
-  changeState(key,value) {
-    if(key === 'pageName' || key === "currentMove") {
+  changeState(key, value) {
+    if (key === "pageName" || key === "currentMove") {
       this.playSound();
-    };
-    
-    this.setState({[key]: value})
+    }
+
+    this.setState({ [key]: value });
   }
   playSound = () => {
     if (this.state.isSoundOn) {
       this.audio = new Audio(soundSrc);
       this.audio.play();
     }
-  }
+  };
   render() {
     const mainMenu = <MainMenu onChangeState={this.changeState} />;
     const enterName = <EnterName onChangeState={this.changeState} />;
@@ -60,27 +60,27 @@ class App extends React.Component {
       <Statistics {...this.state} onChangeState={this.changeState} />
     );
 
-    let currentPage = mainMenu
+    let currentPage = mainMenu;
     switch (this.state.pageName) {
-      case 'MainMenu':
+      case "MainMenu":
         currentPage = mainMenu;
         break;
-      case 'GameArea':
+      case "GameArea":
         currentPage = gameArea;
         break;
-      case 'EnterName':
+      case "EnterName":
         currentPage = enterName;
         break;
-      case 'EndGame':
+      case "EndGame":
         currentPage = endGame;
         break;
-      case 'Settings':
+      case "Settings":
         currentPage = settings;
         break;
-      case 'Statistics':
+      case "Statistics":
         currentPage = statistics;
         break;
-    
+
       default:
         break;
     }
@@ -88,7 +88,7 @@ class App extends React.Component {
     return (
       <div className="App">
         {currentPage}
-        <Music isMusicOn={this.state.isMusicOn}/>
+        <Music isMusicOn={this.state.isMusicOn} />
       </div>
     );
   }
