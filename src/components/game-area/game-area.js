@@ -11,16 +11,14 @@ class GameArea extends React.Component {
   }
   render() {
     return (
-    <div className="game-area"
-      onClick={this.addListener}>
-      <Header 
-      onChangeState={this.props.onChangeState}
-      gameScore = {this.props.gameScore}
-      gameTime = {this.props.gameTime}/>
-      <DialoqueArea 
-      {...this.props}
-      dialoguesData = {dialoguesData} />
-    </div>
+      <div className="game-area" onClick={this.addListener}>
+        <Header
+          onChangeState={this.props.onChangeState}
+          gameScore={this.props.gameScore}
+          gameTime={this.props.gameTime}
+        />
+        <DialoqueArea {...this.props} dialoguesData={dialoguesData} />
+      </div>
     );
   }
 }
