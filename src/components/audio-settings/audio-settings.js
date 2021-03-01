@@ -1,6 +1,6 @@
-import React from 'react';
-import SettingsToggle from '../settings-toggle/settings-toggle';
-import SettingsRange from '../settings-range/settings-range';
+import React from "react";
+import SettingsToggle from "../settings-toggle/settings-toggle";
+import SettingsRange from "../settings-range/settings-range";
 
 class AudioSettings extends React.Component {
   render() {
