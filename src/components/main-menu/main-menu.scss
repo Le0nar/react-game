@@ -1,17 +1,21 @@
 .main-menu {
+    border: 8px solid #F2DAE6;
+    box-sizing: border-box;
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.25);
+    filter: drop-shadow(0px 0px 35px #FF10D9);
     width: 400px;
-    height: 200px;
-    margin: 0 auto;
-    background: green;
+    margin: 13vh auto 2vh ;
     font-size: 40px;
+    text-align: center;
     & ul {
         padding-top: 2vh;
+        text-align: left;
     }
     & li {
         cursor: pointer;
     }
     & li:hover {
-        background: brown;
+        color: #ff3366;
     }
     & li+li {
         padding-top: 3vh;
