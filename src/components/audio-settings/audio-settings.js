@@ -26,7 +26,7 @@ class AudioSettings extends React.Component {
         />
         <SettingsRange
           name="Sound volume"
-          propertyName="soundVolume"
+          propertyName="soundVolume"  
           currentValue={this.props.soundVolume}
           onChangeState={this.props.onChangeState}
         />
