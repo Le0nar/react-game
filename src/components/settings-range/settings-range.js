@@ -4,7 +4,6 @@ import "./settings-range.scss";
 class SettingsRange extends React.Component {
   changeValue = (e) => {
     this.props.onChangeState(this.props.propertyName, e.target.value)
-    console.log(this.props.currentValue)
   };
   render() {
     return (

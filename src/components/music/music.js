@@ -6,7 +6,11 @@ class Music extends React.Component {
     super(props);
     this.musicRef = React.createRef();
   }
+
   render() {
+    if (this.musicRef.current !== null) {
+      this.musicRef.current.volume = this.props.musicVolume
+    }
     const audio = (
       <audio
         autoPlay
