@@ -53,6 +53,7 @@ class App extends React.Component {
   playSound = () => {
     if (this.state.isSoundOn) {
       this.audio = new Audio(soundSrc);
+      this.audio.volume=this.state.soundVolume;
       this.audio.play();
     }
   };
@@ -128,7 +129,10 @@ class App extends React.Component {
         style={{ backgroundImage: "url(" + pathBgImage + ")" }}
       >
         {currentPage}
-        <Music isMusicOn={this.state.isMusicOn} />
+        <Music
+          isMusicOn={this.state.isMusicOn}
+          musicVolume={this.state.musicVolume}
+        />
       </div>
     );
   }

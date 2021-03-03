@@ -1,5 +1,5 @@
-import React from 'react';
-import soundSrc from '../../audio/Komiku-Road-2-Chill.mp3';
+import React from "react";
+import soundSrc from "../../audio/Komiku-Road-2-Chill.mp3";
 
 class Music extends React.Component {
   constructor(props) {
@@ -7,8 +7,15 @@ class Music extends React.Component {
     this.musicRef = React.createRef();
   }
   render() {
-    const audio = <audio autoPlay src={soundSrc} ref={this.musicRef} volume={0.2} loop/>;
-
+    const audio = (
+      <audio
+        autoPlay
+        src={soundSrc}
+        ref={this.musicRef}
+        volume={this.props.musicVolume}
+        loop
+      />
+    );
     return this.props.isMusicOn ? audio : false;
   }
 }
