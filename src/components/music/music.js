@@ -18,6 +18,7 @@ class Music extends React.Component {
         ref={this.musicRef}
         volume={this.props.musicVolume}
         loop
+        preload="auto"
       />
     );
     return this.props.isMusicOn ? audio : false;
