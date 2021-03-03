@@ -1,0 +1,71 @@
+.dialoque-area {
+    display: flex;
+    flex-direction: column;
+
+    margin: 0 auto 8vh;
+
+    flex: 0 0 auto;
+    &__top {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__name {
+        min-width: 80px;
+        height: 33px;
+        padding: 4px;
+        position: relative;
+        top: 370px;
+
+        background: linear-gradient(180deg, #F331A5 0%, rgba(255, 255, 255, 0) 100%), #F899EE;
+        border: 2px solid #FCFFDC;
+        box-sizing: border-box;
+        border-radius: 10px;
+
+        text-align: center;
+        font-size: 18px;
+    }
+    &__display {  
+        height: 130px;
+        width: 700px;
+        padding: 8px 16px;
+
+        background: linear-gradient(180deg, #F899EE 0%, rgba(255, 255, 255, 0) 100%), #F331A5;
+        border: 2px solid #FCFFDC;
+        border-radius: 20px;
+
+        font-size: 20px;
+        & p {
+            height: 60px;
+        }
+    }
+    &__next-btn {
+        background: transparent;
+        position: relative;
+        left: 590px;
+        bottom: 32px;
+    }
+    &__partner-img {
+        height: 420px;
+        position: relative;
+        right: 130px;
+    }
+}
+
+@media (max-width: 726px) {
+    .app {
+        overflow:scroll;
+    }
+    .dialoque-area__display {
+        width: 400px;
+        height: 169px;
+    }
+    .dialoque-area__name {
+        top: 210px
+    }
+    .dialoque-area__partner-img {
+        height: 300px;
+    }
+    .dialoque-area__next-btn {
+        left: 300px;
+    }
+}

@@ -1,0 +1,16 @@
+.choose-area {
+    &__possible-answer{
+        padding-left: 10px;
+        padding-bottom: 2px;
+        cursor: pointer;
+    }
+    &__possible-answer:hover {
+        background: #fff;
+        border: 2px solid #f899ee;
+        border-radius: 30px;
+        color: #f899ee;
+    }
+    &__possible-answer span + span {
+        padding-left: 10px;
+    }
+}

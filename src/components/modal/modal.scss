@@ -1,0 +1,72 @@
+.modal {
+    // display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+}
+.modal-header {
+    text-align: center;
+    padding: 2px 16px;
+    color: white;
+}
+.modal-content {
+    border: 8px solid #F2DAE6;
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.25);
+    filter: drop-shadow(0px 0px 35px #FF10D9);
+    position: relative;
+    margin: auto;
+    padding: 0;
+    width: 50%;
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    & button {
+        background: transparent;
+        color: #fff;
+        border-bottom: 2px solid #fff;
+        font-size: 24px;
+
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 0);
+        font-family: 'Emilys Candy';
+        margin-bottom: 8px;
+    }
+}
+
+
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #FF10D9;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+

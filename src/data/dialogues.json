@@ -1,0 +1,140 @@
+{
+    "name": "Hayako",
+    "img": "hayako.png",
+    "playerPhrase":"Hi, my name is ",
+    "questions": [
+        {
+            "partnerPhrase":"We don't have much time, so let's start our date. What is your star sign?",
+            "answers": {
+                "left": {
+                    "answer": "Astrology is a pseudo-science.",
+                    "score": "5",
+                    "reaction": "Hmm..."
+                },
+                "up": {
+                    "answer": "I’m a Gemini, if I remember correctly.",
+                    "score": "15",
+                    "reaction": "Nice."
+                },
+                "right": {
+                    "answer": "I'm The Map",
+                    "score": "10",
+                    "reaction": "Ok, let’s say you’re a Map."
+                },
+                "down": {
+                    "answer": "I’m an Aries.",
+                    "score": "20",
+                    "reaction": "Really? Me too! I’ve read we have similar astral energy!"
+                }
+            }
+        },
+        {
+            "partnerPhrase":"What do you do in your spare time?",
+            "answers": {
+                "left": {
+                    "answer": "I watch «4 weddings» on Friday channel. Love it",
+                    "score": "20",
+                    "reaction": "I love watching «4 weddings» too!"
+                },
+                "up": {
+                    "answer": "I like to play on the computer and watch anime!",
+                    "score": "5",
+                    "reaction": "I see…"
+                },
+                "right": {
+                    "answer": "I go to the gym.",
+                    "score": "10",
+                    "reaction": "You don't look like it."
+                },
+                "down": {
+                    "answer": "I watch serials on TV.",
+                    "score": "15",
+                    "reaction": "I see…"
+                }
+            }
+        },
+        {
+            "partnerPhrase":"Do you like to travel?",
+            "answers": {
+                "left": {
+                    "answer": "I don’t like to live my house.",
+                    "score": "5",
+                    "reaction": "I see..."
+                },
+                "up": {
+                    "answer": "I had recently returned from Prague.",
+                    "score": "20",
+                    "reaction": "Cool! I'd like to go there, too."
+                },
+                "right": {
+                    "answer": "I had recently been to holiday cottage.",
+                    "score": "10",
+                    "reaction": " Interesting…."
+                },
+                "down": {
+                    "answer": "I dream of traveling!",
+                    "score": "15",
+                    "reaction": "Travelling is lit!"
+                }
+            }
+        },
+        {
+            "partnerPhrase":"Have you got a favorite TV show?",
+            "answers": {
+                "left": {
+                    "answer": "«Ivanovs-Ivanov»",
+                    "score": "10",
+                    "reaction": "Haven’t watched"
+                },
+                "up": {
+                    "answer": "I favour anime.",
+                    "score": "5",
+                    "reaction": "..."
+                },
+                "right": {
+                    "answer": "«Game of thrones»",
+                    "score": "15",
+                    "reaction": "I’ve heard about it but haven’t watched."
+                },
+                "down": {
+                    "answer": "«Stranger Things»",
+                    "score": "20",
+                    "reaction": "I love it too! The setting is so cool."
+                }
+            }
+        },
+        {
+            "partnerPhrase":"How do you feel about animals? Personally, I'm crazy about little dogs.",
+            "answers": {
+                "left": {
+                    "answer": "I love pet rats, I have two of them at home.",
+                    "score": "10",
+                    "reaction": "They are so…"
+                },
+                "up": {
+                    "answer": "I don’t like animals.",
+                    "score": "5",
+                    "reaction": "Fair enough."
+                },
+                "right": {
+                    "answer": "I love kitties and dogs !",
+                    "score": "15",
+                    "reaction": "Cool !"
+                },
+                "down": {
+                    "answer": "I love animals, two dogs wait for me at home.",
+                    "score": "20",
+                    "reaction": "Really, I’d like to see them…"
+                }
+            }
+        }
+    ],
+    "decisions": {
+        "s": "I really enjoyed talking to you! You can write down my number.",
+        "a": "It was nice to talk to you. Hope to see you again.",
+        "b": "It was nice to talk to you, good luck.",
+        "c": "Thank you for the conversation, bye.",
+        "d": "Bye."
+    }
+    
+}
