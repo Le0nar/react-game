@@ -5,6 +5,7 @@ import ChooseArea from "../choose-area/choose-area";
 import hayakoImg from "../../images/partners/hayako.png";
 import nekoImg from "../../images/partners/neko.png";
 import yukiImg from "../../images/partners/yuki.png";
+import nextArrow from "../../images/icons/next-arrow.png"
 
 class DialoqueArea extends React.Component {
   constructor(props) {
@@ -176,8 +177,8 @@ class DialoqueArea extends React.Component {
       currentContent = (
         <React.Fragment>
           <DisplayText content={dialoguesData.decisions[reactionMark]} />
-          <button className="dialoque-area__btn" onClick={this.goToEndGame}>
-            Finish the game
+          <button className="dialoque-area__next-btn" onClick={this.goToEndGame}>
+            <img src={nextArrow}/>
           </button>
         </React.Fragment>
       );
@@ -188,8 +189,8 @@ class DialoqueArea extends React.Component {
       : this.props.partnerName;
 
     const nextButton = this.state.isBtnActive ? (
-      <button className="dialoque-area__btn" onClick={this.changeMove}>
-        Next
+      <button className="dialoque-area__next-btn" onClick={this.changeMove}>
+        <img src={nextArrow}/>
       </button>
     ) : (
       false

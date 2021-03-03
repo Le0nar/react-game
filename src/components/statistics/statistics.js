@@ -7,6 +7,7 @@ class Statistics extends React.Component {
     render () {
         return(
             <div className="statistics">
+                <h3>Chart</h3>
                 <StatisticsTable {...this.props}/>
                 <ToMainMenuBtn content="Back" onChangeState={this.props.onChangeState}/>
             </div>

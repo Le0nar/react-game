@@ -33,7 +33,7 @@ class Settings extends React.Component {
                     currentValue={this.props.isTimeGame}
                     onChangeState={this.props.onChangeState}/>
 
-                <ToMainMenuBtn content="Back to main menu" 
+                <ToMainMenuBtn content="Back" 
                     onChangeState={this.props.onChangeState}/>
             </div>
         );

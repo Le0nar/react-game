@@ -1,4 +1,13 @@
 .scoreboard {
-    background-color: green;
-    width: 100px;
+    height: 65px;
+    padding: 0 8px;
+    background: linear-gradient(180deg, #F331A5 0%, rgba(255, 255, 255, 0) 100%), #F899EE;
+    border: 2px solid #FCFFDC;
+    border-radius: 25px;
+    
+    font-size: 27px;
+    line-height: 60px;
+    &:nth-of-type(2) {
+        width: 185px;
+    }
 }

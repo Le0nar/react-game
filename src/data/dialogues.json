@@ -47,7 +47,7 @@
                     "reaction": "You don't look like it."
                 },
                 "down": {
-                    "answer": "- I watch serials on TV.",
+                    "answer": "I watch serials on TV.",
                     "score": "15",
                     "reaction": "I see…"
                 }
@@ -62,7 +62,7 @@
                     "reaction": "I see..."
                 },
                 "up": {
-                    "answer": "I had recently returned from Prague, I often go there for work.",
+                    "answer": "I had recently returned from Prague.",
                     "score": "20",
                     "reaction": "Cool! I'd like to go there, too."
                 },
@@ -72,7 +72,7 @@
                     "reaction": " Interesting…."
                 },
                 "down": {
-                    "answer": "I dream of traveling, I still can't find the time to go somewhere!",
+                    "answer": "I dream of traveling!",
                     "score": "15",
                     "reaction": "Travelling is lit!"
                 }

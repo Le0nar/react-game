@@ -1,7 +1,8 @@
 .settings {
-    background: #c4c4c4;
-    max-width: 450px;
-    height: 300px;
+    max-width: 550px;
+    height: 555px;
+    margin:auto;
+    padding: 16px 32px;
 
     position: absolute;
     top: 0;
@@ -9,19 +10,36 @@
     right: 0;
     left: 0;
 
-    margin: auto;
-    padding: 16px 32px;
+    font-size: 20px;
+
+
+    border: 8px solid #F2DAE6;
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.25);
+    filter: drop-shadow(0px 0px 35px #FF10D9);
     & h3 {
         text-align: center;
+        margin: 8px 0px;
+    }
+    & button {
+        background: transparent;
+        color: #fff;
+        border-bottom: 2px solid #fff;
+        font-size: 24px;
+
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 0);
+        font-family: 'Emilys Candy';
     }
 }
 .settings-item {
     display: flex;
     justify-content: space-between;
-    background: green;
-    width: 80%;
-    margin: 5px auto;
-    padding: 6px;
+    background: rgba(248, 193, 193, 0.53);
+    border-radius: 15px;
+    width: 90%;
+    margin: 16px auto;
+    padding: 8px 16px;
     & select {
         -webkit-padding-end: 20px;
         -moz-padding-end: 20px;
@@ -34,4 +52,30 @@
         padding-top: 2px;
         padding-bottom: 2px;
      }
+}
+
+// 
+.end-game {
+
+
+
+
+    & h3 {
+        text-align: center;
+        font-weight: normal;
+        font-size: 24px;
+    }
+    &__text {
+        padding-top: 8px;
+    }
+    &__btn {
+        background: transparent;
+        color: #fff;
+        border-bottom: 2px solid #fff;
+        font-size: 24px;
+
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
 }

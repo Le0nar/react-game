@@ -62,7 +62,9 @@ class EndGame extends React.Component {
         <p className="end-game__text">
           Date place :<span> {this.props.datePlace}.</span>
         </p>
-        <button onClick={this.addDataToStatistics}>To main menu</button>
+        <button className="end-game__btn" onClick={this.addDataToStatistics}>
+          Menu
+        </button>
       </div>
     );
   }

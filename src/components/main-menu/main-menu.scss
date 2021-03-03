@@ -7,6 +7,7 @@
     margin: 13vh auto 2vh ;
     font-size: 40px;
     text-align: center;
+    flex: 1 0 auto;
     & ul {
         padding-top: 2vh;
         text-align: left;
@@ -15,7 +16,7 @@
         cursor: pointer;
     }
     & li:hover {
-        color: #ff3366;
+        color: #ff0066;
     }
     & li+li {
         padding-top: 3vh;

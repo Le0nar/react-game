@@ -12,6 +12,7 @@
 body {
     font-family: 'Emilys Candy';
     color: #FCFFDC;
+    letter-spacing: 0.1rem;
 }
 input, button, a, li, ul {
     text-decoration: none;
@@ -19,7 +20,6 @@ input, button, a, li, ul {
     outline: none;
     margin: 0;
     padding: 0;
-
 }
 li {
     list-style-type: none;
